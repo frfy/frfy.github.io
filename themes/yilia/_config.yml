@@ -1,23 +1,24 @@
 # Header
 
 menu:
-  主页: /
-  随笔: /tags/随笔/
+  Homepage: /
+  DEEP LEARNING: /tags/DEEP LEARNING/
+  MACHINE LEARNING: /tags/MACHINE LEARNING/
 
 # SubNav
 subnav:
-  github: "#"
-  weibo: "#"
-  rss: "#"
-  zhihu: "#"
-  #qq: "#"
+  github: "https://github.com/frfy"
+  #weibo: "#"
+  rss: /atom.xml
+  zhihu: "https://www.zhihu.com/people/frfy-14/activities"
+  qq: "192711789"
   #weixin: "#"
   #jianshu: "#"
   #douban: "#"
   #segmentfault: "#"
   #bilibili: "#"
   #acfun: "#"
-  #mail: "mailto:litten225@qq.com"
+  mail: "ccf11@foxmail.com"
   #facebook: "#"
   #google: "#"
   #twitter: "#"

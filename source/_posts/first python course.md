@@ -1,5 +1,5 @@
 ---
-title: python教程基础一
+title: python教程一
 tags:
 	- python
 	- PROGRAMMING
@@ -19,13 +19,13 @@ tags:
 为什么是python？
 * 简洁高效
 * 功能完备
-* 高度集成  
-  
-动态强类型程式语言，数据类型靠值来确定     
-Linux MacOS都预装了python   
-C/C++、Java区别几个方面：语法、性能、易用性、平台要求。    
-例：图像处理C/C++ 3000+行python百行就可以实现 ）   
-面向众多应用：网站搭建、应用程序、数据分析、人工智能  
+* 高度集成
+
+<font  size=2 >动态强类型程式语言，数据类型靠值来确定。</font>
+<font  size=2 >Linux MacOS都预装了python。</font>
+<font  size=2 >C/C++、Java区别几个方面：语法、性能、易用性、平台要求。</font>
+<font  size=2 >例：图像处理代码C/C++ 3000+，python百行就可以实现。</font>
+<font  size=2 >面向众多应用：网站搭建、应用程序、数据分析和人工智能等。</font>
     
 ***python安装***   
 

@@ -1,0 +1,11 @@
+---
+title: python教程二 		
+tags:  	
+    - python 	
+    - PROGRAMMING 		
+---
+本次的主要内容包括：    
+- python语法基础
+- python基本运算
+- python函数模块包库    
+<!--more-->

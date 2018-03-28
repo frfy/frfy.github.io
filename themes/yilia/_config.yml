@@ -3,8 +3,8 @@
 menu:
   Homepage: /
   DATABASE: /tags/DATABASE/
-  ALGORITHM: /tags/ALGORITHM/
-#  PROGRAMMING: /tags/PROGRAMMING/
+#  ALGORITHM: /tags/ALGORITHM/
+  PROGRAMMING: /tags/PROGRAMMING/
 #  DEEPLEARNING: /tags/DEEPLEARNING/
   COMPUTERVISION: /tags/COMPUTERVISION/
   MACHINELEARNING: /tags/MACHINELEARNING/
@@ -15,7 +15,7 @@ subnav:
   #weibo: "#"
   rss: /atom.xml
   zhihu: "https://www.zhihu.com/people/frfy-14/activities"
-  qq: "192711789"
+  #qq: "192711789"
   #weixin: "#"
   #jianshu: "#"
   #douban: "#"

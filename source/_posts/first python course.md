@@ -1,7 +1,9 @@
-python教程基础一
+---
+title: python教程基础一
 tags:
 	- python
-==============
+	- PROGRAMMING
+---
 此教程旨在给同事分享python由基础到数据分析模块而建。由于我也是半路直接上手，并未系统的学习该语言所以建此教程方便以后查漏补缺改正错误，就当学习笔记吧~~
     
 **本课程内容**
@@ -27,7 +29,7 @@ C/C++、Java区别几个方面：语法、性能、易用性、平台要求。
 ***python安装***   
 
 * python下载安装    
-在[python官网](https://www.python.org/)下载使用的版本，目前主流版本有python 3.X和python 2.X，两个版本在语法上稍有区别，个人推荐3.X版本。     
+在[python官网](https://www.python.org/)下载不同的版本，目前主流版本有python 3.X和python 2.X，两个版本在语法上稍有区别，个人推荐3.X版本。     
 
 * IDE选择   
 
@@ -41,10 +43,12 @@ C/C++、Java区别几个方面：语法、性能、易用性、平台要求。
 
 ***python第一个程序***    
 * helloWord     
-<pre><code>
+	
+	
+``` bash
 >>MyString='hello word'
 >>print(MyString)
-</pre></code>
+```		
     
 * 运行方式    
 shell方式   
@@ -53,16 +57,16 @@ shell方式
 * 输入输出  
 
 input()     
-<pre><code>
+``` bash
 x=input('Enter a number:')
-</pre></code>     
+```     
 
 print()  
 
-<pre><code>
+``` bash
 print('The X is :')     
 print(X)
-</pre></code>     
+```     
 
 ***python基本类型***    
 * 整型

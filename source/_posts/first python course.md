@@ -13,6 +13,7 @@ tags:
 - python基本类型
 
     
+<!--more-->
 ***python简介***    
 
 为什么是python？

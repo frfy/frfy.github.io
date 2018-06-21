@@ -17,7 +17,7 @@ pip freeze >requirements.txt
 pip download -d c:/pgk -r requirements.txt
 ```	
 	
-* 将按照requirements.txt下载到本地依赖包安装	
+* 安装按照requirements.txt下载到本地的依赖包	
 	
 ```	
 pip install --no-index --find-links=c:/pgk -r requirements.txt

@@ -1,7 +1,7 @@
 ---
 title: Python 离线环境配置
 tags:
-	- Triks
+	- Tricks
 ---
 python 离线环境配置
 <!--more-->

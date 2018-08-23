@@ -113,7 +113,7 @@ pretty() 方法以格式化的方式来显示所有文档。
 
 |操作|格式|范例|
 |:---|:---|:---|
-|等于		|{<key>:<value>}			|db.col.find({"by":"菜鸟教程"}).pretty()|
+|等于		|{<key>:<value>}			|db.col.find({"by":"name"}).pretty()|
 |小于		|{<key>:{$lt:<value>}}		|db.col.find({"likes":{$lt:50}}).pretty()|
 |小于或等于	|{<key>:{$lte:<value>}}		|db.col.find({"likes":{$lte:50}}).pretty()|
 |大于		|{<key>:{$gt:<value>}}		|db.col.find({"likes":{$gt:50}}).pretty()|

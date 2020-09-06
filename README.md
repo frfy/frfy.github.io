@@ -1,0 +1,2 @@
+# frfy.github.io
+blog

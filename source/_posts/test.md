@@ -1,8 +1,8 @@
 ---
 title: test从0到100
 tags:
-	- MACHINELEARNING
-	- DEEPLEARNING
+- MACHINELEARNING
+- DEEPLEARNING
 ---
 本篇将从底层实现神经网络到应用成熟框架分解深度学习原理。本篇将持续更新。
 * 多层感知机

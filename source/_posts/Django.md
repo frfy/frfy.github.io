@@ -1,8 +1,8 @@
 ---
 title: 瞎写测试
 tags:
-	- python
-    - PROGRAMMING
+- python
+- PROGRAMMING
 ---
 Django 安装和入门。
 <!--more-->

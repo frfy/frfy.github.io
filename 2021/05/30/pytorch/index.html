@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://github.com/frfy">
-  <title>Tag: SPSS | 小站练兵</title>
+  <title>pytorch | 小站练兵</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="PROGRAMMING,ALGORITHM,COMPUTERVISION,MACHINELEARNING,DEEPLEARNING,DATABASE">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小站练兵">
-<meta property="og:url" content="http://github.com/frfy/tags/SPSS/index.html">
+  <meta name="description" content="MongoDB基本操作：增、删、改、查等。">
+<meta name="keywords" content="PROGRAMMING,DATABASE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pytorch">
+<meta property="og:url" content="http://github.com/frfy/2021/05/30/pytorch/index.html">
 <meta property="og:site_name" content="小站练兵">
+<meta property="og:description" content="MongoDB基本操作：增、删、改、查等。">
+<meta property="og:updated_time" content="2021-05-29T20:42:27.107Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小站练兵">
+<meta name="twitter:title" content="pytorch">
+<meta name="twitter:description" content="MongoDB基本操作：增、删、改、查等。">
   
     <link rel="alternative" href="/atom.xml" title="小站练兵" type="application/atom+xml">
   
@@ -166,64 +170,402 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-pytorch" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/24/SPSS 数据分析/" class="archive-article-date">
-  	<time datetime="2018-06-24T10:36:32.499Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-24</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/24/SPSS 数据分析/">SPSS 数据分析</a>
+    <h1 class="article-title" itemprop="name">
+      pytorch
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2021/05/30/pytorch/" class="archive-article-date">
+  	<time datetime="2021-05-29T20:42:06.965Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>MongoDB基本操作：增、删、改、查等。<br><a id="more"></a></p>
+<h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><p>use DATABASE_NAME 数据库存在就切换到指定数据库，不存在则创建数据库<br>db 显示当前数据库对象或集合<br>show dbs 显示所有数据的列表</p>
+<h2 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h2><p>db.dropDatabase()</p>
+<h2 id="显示集合"><a href="#显示集合" class="headerlink" title="显示集合"></a>显示集合</h2><p>show collections<br>show tables</p>
+<h2 id="创建集合"><a href="#创建集合" class="headerlink" title="创建集合"></a>创建集合</h2><p>db.createCollection(name, options)</p>
+<p>options 可以是如下参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">字段</th>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">capped</td>
+<td style="text-align:left">布尔</td>
+<td style="text-align:left">（可选）如果为 true，则创建固定集合。固定集合是指有着固定大小的集合，当达到最大值时，它会自动覆盖最早的文档。当该值为 true 时，必须指定 size 参数。</td>
+</tr>
+<tr>
+<td style="text-align:left">autoIndexId</td>
+<td style="text-align:left">布尔</td>
+<td style="text-align:left">（可选）如为 true，自动在 _id 字段创建索引。默认为 false。</td>
+</tr>
+<tr>
+<td style="text-align:left">max</td>
+<td style="text-align:left">数值</td>
+<td style="text-align:left">（可选）指定固定集合中包含文档的最大数量。</td>
+</tr>
+<tr>
+<td style="text-align:left">size</td>
+<td style="text-align:left">数值</td>
+<td style="text-align:left">（可选）为固定集合指定一个最大值（以字节计）。如果 capped 为 true，也需要指定该字段。</td>
+</tr>
+</tbody>
+</table>
+<p>MongoDB 也可以在插入文档时自动创建集合。<br>db.COLLECTION_NAME.insert(document)</p>
+<h2 id="删除集合"><a href="#删除集合" class="headerlink" title="删除集合"></a>删除集合</h2><p>db.collection_name.drop()</p>
+<h2 id="插入文档"><a href="#插入文档" class="headerlink" title="插入文档"></a>插入文档</h2><p>使用 insert() 或 save() 方法向集合中插入文档<br>db.COLLECTION_NAME.insert(document)</p>
+<p>也可以使用 db.col.save(document) 命令。如果不指定 _id 字段 save() 方法类似于 insert() 方法。如果指定 _id 字段，则会更新该 _id 的数据。</p>
+<h2 id="更新文档"><a href="#更新文档" class="headerlink" title="更新文档"></a>更新文档</h2><p>在3.2版本，MongoDB提供更新集合文档的方法：<br>db.collection.updateOne() 向指定集合更新单个文档<br>db.collection.updateMany() 向指定集合更新多个文档</p>
+<p>原先使用 update() 和 save() 方法来更新集合中的文档</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">db.collection.update(</span><br><span class="line">   <span class="params">&lt;query&gt;</span>,</span><br><span class="line">   <span class="params">&lt;update&gt;</span>,</span><br><span class="line">   &#123;</span><br><span class="line"><span class="symbol">     upsert:</span> <span class="params">&lt;boolean&gt;</span>,</span><br><span class="line"><span class="symbol">     multi:</span> <span class="params">&lt;boolean&gt;</span>,</span><br><span class="line"><span class="symbol">     writeConcern:</span> <span class="params">&lt;document&gt;</span></span><br><span class="line">   &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>query : update的查询条件，类似sql update查询内where后面的。</li>
+<li>update : update的对象和一些更新的操作符（如$,$inc…）等，也可以理解为sql update查询内set后面的</li>
+<li>upsert : 可选，这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入。</li>
+<li>multi : 可选，mongodb 默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。</li>
+<li>writeConcern :可选，抛出异常的级别。</li>
+</ul>
+<p>save() 方法通过传入的文档来替换已有文档。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">db</span><span class="selector-class">.collection</span><span class="selector-class">.save</span>(</span><br><span class="line">   &lt;<span class="selector-tag">document</span>&gt;,</span><br><span class="line">   &#123;</span><br><span class="line">     <span class="attribute">writeConcern</span>: &lt;document&gt;</span><br><span class="line">   &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">只更新第一条记录：</span><br><span class="line">db.col.<span class="keyword">update</span>( &#123; <span class="string">"count"</span> : &#123; $gt : <span class="number">1</span> &#125; &#125; , &#123; $set : &#123; <span class="string">"test2"</span> : <span class="string">"OK"</span>&#125; &#125; );</span><br><span class="line">全部更新：</span><br><span class="line">db.col.<span class="keyword">update</span>( &#123; <span class="string">"count"</span> : &#123; $gt : <span class="number">3</span> &#125; &#125; , &#123; $set : &#123; <span class="string">"test2"</span> : <span class="string">"OK"</span>&#125; &#125;,<span class="literal">false</span>,<span class="literal">true</span> );</span><br><span class="line">只添加第一条：</span><br><span class="line">db.col.<span class="keyword">update</span>( &#123; <span class="string">"count"</span> : &#123; $gt : <span class="number">4</span> &#125; &#125; , &#123; $set : &#123; <span class="string">"test5"</span> : <span class="string">"OK"</span>&#125; &#125;,<span class="literal">true</span>,<span class="literal">false</span> );</span><br><span class="line"></span><br><span class="line">db.test_collection.updateOne(&#123;<span class="string">"name"</span>:<span class="string">"abc"</span>&#125;,&#123;$set:&#123;<span class="string">"age"</span>:<span class="string">"28"</span>&#125;&#125;)</span><br><span class="line">db.test_collection.updateMany(&#123;<span class="string">"age"</span>:&#123;$gt:<span class="string">"10"</span>&#125;&#125;,&#123;$set:&#123;<span class="string">"status"</span>:<span class="string">"xyz"</span>&#125;&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="删除文档"><a href="#删除文档" class="headerlink" title="删除文档"></a>删除文档</h2><p>使用 deleteOne() 和 deleteMany() 方法，还有remove()函数</p>
+<h2 id="查询文档"><a href="#查询文档" class="headerlink" title="查询文档"></a>查询文档</h2><p>db.collection.find(query, projection)</p>
+<ul>
+<li>query ：可选，使用查询操作符指定查询条件</li>
+<li>projection ：可选，使用投影操作符指定返回的键。查询时返回文档中所有键值， 只需省略该参数即可（默认省略）。<br>{key1:1,key2:1}  inclusion模式 指定返回的键，不返回其他键<br>{key1:0,key2:0}  exclusion模式 指定不返回的键,返回其他键<br>两种模式不能混用，只能全1或全0，除了在inclusion模式时可以指定_id为0<br>_id 键默认返回，需要主动指定 _id:0 才会隐藏</li>
+</ul>
+<p>db.col.find().pretty()<br>pretty() 方法以格式化的方式来显示所有文档。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作</th>
+<th style="text-align:left">格式</th>
+<th style="text-align:left">范例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">等于</td>
+<td style="text-align:left">{<key>:<value>}</value></key></td>
+<td style="text-align:left">db.col.find({“by”:”name”}).pretty()</td>
+</tr>
+<tr>
+<td style="text-align:left">小于</td>
+<td style="text-align:left">{<key>:{$lt:<value>}}</value></key></td>
+<td style="text-align:left">db.col.find({“likes”:{$lt:50}}).pretty()</td>
+</tr>
+<tr>
+<td style="text-align:left">小于或等于</td>
+<td style="text-align:left">{<key>:{$lte:<value>}}</value></key></td>
+<td style="text-align:left">db.col.find({“likes”:{$lte:50}}).pretty()</td>
+</tr>
+<tr>
+<td style="text-align:left">大于</td>
+<td style="text-align:left">{<key>:{$gt:<value>}}</value></key></td>
+<td style="text-align:left">db.col.find({“likes”:{$gt:50}}).pretty()</td>
+</tr>
+<tr>
+<td style="text-align:left">大于或等于</td>
+<td style="text-align:left">{<key>:{$gte:<value>}}</value></key></td>
+<td style="text-align:left">db.col.find({“likes”:{$gte:50}}).pretty()</td>
+</tr>
+<tr>
+<td style="text-align:left">不等于</td>
+<td style="text-align:left">{<key>:{$ne:<value>}}</value></key></td>
+<td style="text-align:left">db.col.find({“likes”:{$ne:50}}).pretty()</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>AND 条件<br>find() 方法可以传入多个键(key)，每个键(key)以逗号隔开</p>
+</li>
+<li><p>OR 条件<br>OR 条件语句使用了关键字 $or</p>
+</li>
+<li><p>$type 操作符</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">数字</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Double</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">String</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Array</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Binary data</td>
+<td style="text-align:left">5</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Undefined</td>
+<td style="text-align:left">6</td>
+<td style="text-align:left">已废弃。</td>
+</tr>
+<tr>
+<td style="text-align:left">Object id</td>
+<td style="text-align:left">7</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Date</td>
+<td style="text-align:left">9</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Null</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Regular Expression</td>
+<td style="text-align:left">11</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">JavaScript</td>
+<td style="text-align:left">13</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Symbol</td>
+<td style="text-align:left">14</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">JavaScript (with scope)</td>
+<td style="text-align:left">15</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">32-bit integer</td>
+<td style="text-align:left">16</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Timestamp</td>
+<td style="text-align:left">17</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">64-bit integer</td>
+<td style="text-align:left">18</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Min key</td>
+<td style="text-align:left">255</td>
+<td style="text-align:left">Query with -1.</td>
+</tr>
+<tr>
+<td style="text-align:left">Max key</td>
+<td style="text-align:left">127</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Limit与Skip方法<br>limit()方法基本语法<br>db.COLLECTION_NAME.find().limit(NUMBER)</li>
+</ul>
+<p>skip() 方法语法<br>db.COLLECTION_NAME.find().limit(NUMBER).skip(NUMBER)</p>
+<ul>
+<li>sort()方法排序<br>sort()方法可以通过参数指定排序的字段，并使用 1 和 -1 来指定排序的方式，其中 1 为升序排列，而-1是用于降序排列。<br>db.COLLECTION_NAME.find().sort({KEY:1})</li>
+</ul>
+<h5 id="注：skip-limilt-sort-三个放在一起执行的时候，执行的顺序是先-sort-然后是-skip-，最后是显示的-limit-。"><a href="#注：skip-limilt-sort-三个放在一起执行的时候，执行的顺序是先-sort-然后是-skip-，最后是显示的-limit-。" class="headerlink" title="注：skip(), limilt(), sort()三个放在一起执行的时候，执行的顺序是先 sort(), 然后是 skip()，最后是显示的 limit()。"></a>注：skip(), limilt(), sort()三个放在一起执行的时候，执行的顺序是先 sort(), 然后是 skip()，最后是显示的 limit()。</h5>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据分析</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">PROGRAMMING</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SPSS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DATABASE</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://github.com/frfy/2021/05/30/pytorch/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/07/09/GAN从0到100/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">GAN从0到100</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -246,9 +588,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,

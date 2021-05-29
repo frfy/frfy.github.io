@@ -1,5 +1,5 @@
 ---
-title: 深度学习从0到100
+title: test从0到100
 tags:
 	- MACHINELEARNING
 	- DEEPLEARNING

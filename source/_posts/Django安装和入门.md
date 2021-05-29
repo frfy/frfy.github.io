@@ -130,3 +130,18 @@ render(request,'page',{'obj':object})
 前段的HTML可以接受到对象直接使用{{object.attribute}}引用。
 
 ## Admin
+Django自动化数据管理界面
+创建管理用户，执行：
+
+```
+python manage.py createsuperuser
+```
+
+## 前端代码
+前端的代码块已{%  %}为标识。
+
+```
+{%for x in y%}
+
+{%endfor%}
+```
